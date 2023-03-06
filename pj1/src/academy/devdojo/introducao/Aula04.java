@@ -9,5 +9,11 @@ public class Aula04 {
         boolean isDentroDaLei = numero01 > 9 && numero02 > 3;
         System.out.println(isDezMaiorQueVinte);
         System.out.println(isDentroDaLei);
+
+
+        double bonus = 2000;
+        bonus *= 10;
+        
+        System.out.println(bonus);
     }
 }
