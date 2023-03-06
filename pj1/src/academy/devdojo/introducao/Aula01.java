@@ -1,5 +1,5 @@
 package academy.devdojo.introducao;
 
-public class OlaDevDojo {
+public class Aula01 {
     
 }
