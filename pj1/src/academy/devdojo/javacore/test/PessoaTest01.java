@@ -1,6 +1,7 @@
 package academy.devdojo.javacore.test;
 
 import academy.devdojo.javacore.dominio.Pessoa;
+import academy.devdojo.javacore.metodos.test.Impressora;
 
 public class PessoaTest01 {
     public static void main(String[] args) {
@@ -9,7 +10,8 @@ public class PessoaTest01 {
         estudante.nome= "Joel";
         estudante.sexo = 'M';
 
-        System.out.println(estudante.idade);
-        System.out.println(estudante);
+        Impressora imprrime = new Impressora();
+        
+        imprrime.impressora(estudante);
     }
 }
