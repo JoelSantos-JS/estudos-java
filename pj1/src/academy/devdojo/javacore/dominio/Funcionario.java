@@ -12,18 +12,23 @@ public class Funcionario {
         System.out.println(this.salario[1]);
         System.out.println(this.salario[2]);
 
-        int media = 0;
-
-        for (double d : salario) {
-            media /= d;    
-        }
-
-        System.out.println(media);
-        
+     
     }
 
     public void mediaSalarios(double... num) {
-      
+        double media = 0;
+
+        for (double d : salario) {
+            media = media + d;  
+
+            System.out.println(media);
+        }
+
+
+        media = media / salario.length;
+
+        System.out.println(media);
+        
     }
 
 }
