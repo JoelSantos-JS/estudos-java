@@ -21,4 +21,24 @@ public class Calculadora {
         System.out.println("nUM" +num1);
         System.out.println("nUM" +num2);
     }
+
+    public void somaTodosOsNumeros(int[] num) {
+        int soma = 0;
+
+        for (int i : num) {
+            soma += i;
+        }
+
+        System.out.println(soma);
+    }
+
+    public void somaVarArray(int... num) {
+        int soma = 0;
+
+        for (int i : num) {
+            soma += i;
+        }
+
+        System.out.println(soma);
+    }
 }

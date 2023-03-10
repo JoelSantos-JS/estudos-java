@@ -21,7 +21,10 @@ public class CalculadorsTest01 {
 
        System.out.println(num1);
 
-       System.out.println(num2);
+       int[] numeros = {1,23,4,56};
+       calculadors.somaTodosOsNumeros(numeros);
+
+       calculadors.somaVarArray(1,4,56,78);
 
     }
 }
