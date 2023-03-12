@@ -1,0 +1,4 @@
+				JAVA
+
+
+modificadores staticos =  o modificador nao pertence mas ao atribudo e sim a class, e tambem metodos staticos nao pode acessar variaveis de instancia

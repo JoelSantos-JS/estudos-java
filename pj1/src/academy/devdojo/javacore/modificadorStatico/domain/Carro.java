@@ -3,7 +3,7 @@ package academy.devdojo.javacore.modificadorStatico.domain;
 public class Carro {
     private String nome;
     private double velocidadeMaxima;
-    public static double velocidadeLimete  = 250;
+    private static double velocidadeLimete  = 250;
 
 
     
@@ -22,19 +22,22 @@ public class Carro {
     }
 
 
+    public static void setVelocidadeLimete(double velocidadeLimete) {
+        Carro.velocidadeLimete = velocidadeLimete;
+    }
+
+    public static double getVelocidadeLimete() {
+        return Carro.velocidadeLimete;
+    }
+
     public String getNome() {
         return nome;
     }
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public double getVelocidadeLimete() {
-        return velocidadeLimete;
-    }
-    public void setVelocidadeLimete(double velocidadeLimete) {
-        this.velocidadeLimete = velocidadeLimete;
-    }
-
+ 
+  
     public double getVelocidadeMaxima() {
         return velocidadeMaxima;
     }
