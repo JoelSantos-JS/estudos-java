@@ -1,6 +1,6 @@
 package academy.devdojo.javacore.LclassesAbstratas.dominio;
 
-abstract class Funcionario {
+abstract class Funcionario  {
     protected String nome;
     protected double salario;
 
