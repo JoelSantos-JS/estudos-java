@@ -14,6 +14,11 @@ public class PatternMatchers {
        //  \W = tudo o que nao for incluso no \w
        // []
 
+       // ? zero ou uma 
+       // * zero ou +
+       // + uma ou mais
+       // de n ate m {n,m}
+
 
         String regex = "aaa";
         String match = "aabbaaabbaaa";
