@@ -9,6 +9,20 @@ public class Celular {
         this.marca = marca;
     }
 
+    @Override 
+    public boolean equals(Object obj) {
+        if(obj == null) return false;
+        if(this == obj) return true;
+        if(this.getClass() != obj.getClass()) return false;
+        Celular celular = (Celular) obj;
+        return seria != null && seria.equals(celular.seria) && marca.equals(celular.marca);
+    }  
+
+    @Override
+    public int hashCode() {
+        return seria == null ? 0 : this.seria.hashCode();
+    }
+
     public String getMarca() {
         return marca;
     }
