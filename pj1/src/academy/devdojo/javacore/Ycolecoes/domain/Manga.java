@@ -7,7 +7,7 @@ public class Manga {
     private String nome;
     private double preco;
 
-    private Manga(Long id, String nome , double preco) {
+    public Manga(Long id, String nome , double preco) {
         Objects.nonNull(id);
         Objects.nonNull(nome);
         Objects.nonNull(preco);
