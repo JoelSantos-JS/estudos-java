@@ -1,6 +1,6 @@
 package academy.devdojo.introducao;
 
-public class Aula11ArrayMultidmensional {
+public class Aula11ArrayMultidmensional {''
     public static void main(String[] args) {
         int[][] dias = new int[3][3];
         dias[0][0] = 31;
