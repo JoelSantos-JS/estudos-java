@@ -3,6 +3,7 @@ package academy.devdojo.javacore.Ycolecoes.test;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 import academy.devdojo.javacore.Ycolecoes.domain.Aula2;
 
@@ -13,11 +14,13 @@ public class Testaula {
         Aula2 aula4 = new Aula2("Jano", 12);
         Aula2 aula5 = new Aula2("ano", 15);
 
-        ArrayList<Aula2> aulas = new ArrayList<>();
+        List<Aula2> aulas = new ArrayList<>();
         aulas.add(aula3);
         aulas.add(aula2);
         aulas.add(aula4);
         aulas.add(aula5);
+
+
 
         Collections.sort(aulas, Comparator.comparing(Aula2::getTempo));
         System.out.println(aulas);

@@ -30,5 +30,21 @@ public class Curso {
          this.aula2.add(aula2);
     }
 
+    public int tempoTotal() {
+        int tempot = 0;
+
+        for (Aula2 aula22 : aula2) {
+            tempot += aula22.getTempo();
+        }
+
+        return tempot;
+    }
+    @Override
+    public String toString() {
+        return "Curso [nome=" + nome + ", proffesor=" + proffesor + "Tempo Totaal "+ this.tempoTotal()+ "]";
+    }
+
+    
+
     
 }
