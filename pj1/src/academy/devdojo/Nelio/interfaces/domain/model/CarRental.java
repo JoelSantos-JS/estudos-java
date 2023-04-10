@@ -1,6 +1,6 @@
 package academy.devdojo.Nelio.interfaces.domain.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class CarRental {
     private Date start;
@@ -33,6 +33,26 @@ public class CarRental {
 
     public Invoice getInvoice() {
         return invoice;
+    }
+
+
+    public void setStart(Date start) {
+        this.start = start;
+    }
+
+
+    public void setFinish(Date finish) {
+        this.finish = finish;
+    }
+
+
+    public void setVeicule(Veicule veicule) {
+        this.veicule = veicule;
+    }
+
+
+    public void setInvoice(Invoice invoice) {
+        this.invoice = invoice;
     }
    
     
