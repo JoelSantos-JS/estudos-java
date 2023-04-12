@@ -57,7 +57,7 @@ public class Client implements Comparable<Client> {
     @Override
     public int compareTo(Client o) {
         // TODO Auto-generated method stub
-        return  this.email.hashCode()  ;
+        return  email.compareTo(o.getEmail()) ;
     }
     
 
