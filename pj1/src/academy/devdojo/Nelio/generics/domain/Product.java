@@ -1,6 +1,6 @@
 package academy.devdojo.Nelio.generics.domain;
 
-public class Product {
+public class Product implements Comparable<Product> {
     private String name;
     private Double price;
     public Product(String name, Double price) {
@@ -22,6 +22,11 @@ public class Product {
     @Override
     public String toString() {
         return "Product [name=" + name + ", price=" + String.format("%.2f", price) + "]";
+    }
+    @Override
+    public int compareTo(Product o) {
+        // TODO Auto-generated method stub
+        return this.price.compareTo(o.getPrice());
     }
 
     

@@ -10,7 +10,7 @@ public class LerArquivos {
         List<Product> products = new ArrayList<>();
 
 
-        String path = "file.txt";
+        String path = "C:/Users/joelt/Desktop/java/file.txt";
 
 
         try(BufferedReader bf = new BufferedReader(new  FileReader(path))) {
@@ -18,14 +18,15 @@ public class LerArquivos {
             String line = bf.readLine();
             while(line != null) {
                 String[] fields = line.split(",");
+                System.out.println("FILDES" + fields[0]);
                 products.add(new Product(fields[0], Double.parseDouble(fields[1])));
                 line = bf.readLine();
             } 
 
-            CalMax<Integer> calMax = new CalMax<>();
-            var integer = calMax.max();
+            Product calMax =  CalMax.max(products);
+          
             System.out.println("MAX:");
-            System.out.print(integer);
+            System.out.print(calMax);
             
         } catch (Exception e) {
             throw new Error("Nao é possivel ler os dados");
