@@ -11,16 +11,19 @@ public class GenericsTes01 {
         
      
        
-        PrintService ps = new PrintService();
-        System.out.print("Digite o numero ");
+        PrintService<String> ps = new PrintService();
+        System.out.print("Digite o numero ou o nome ");
         int n1 =  sc.nextInt();
 
     for (int i =0; i < n1; i++) {
-        int value = sc.nextInt();
+        String value = sc.next();
         ps.addValue(value);
     }
 
-    ps.pfirts();
+    ps.print();
+ 
+    String integer =  ps.pfirts();
+System.out.println("Primeiro " + integer) ;
 
     sc.close();
 
