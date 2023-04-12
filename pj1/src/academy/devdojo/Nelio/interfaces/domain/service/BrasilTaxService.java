@@ -1,6 +1,6 @@
 package academy.devdojo.Nelio.interfaces.domain.service;
 
-public class BrasilTaxService {
+public class BrasilTaxService implements TaxService {
 
 
 
