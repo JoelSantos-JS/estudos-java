@@ -1,6 +1,6 @@
 package academy.devdojo.Nelio.Colections.domain;
 
-public class Client {
+public class Client implements Comparable<Client> {
     private String nome;
     private String email;
 
@@ -49,6 +49,15 @@ public class Client {
         } else if (!email.equals(other.email))
             return false;
         return true;
+    }
+    @Override
+    public String toString() {
+        return "Client [nome=" + nome + ", email=" + email + "]";
+    }
+    @Override
+    public int compareTo(Client o) {
+        // TODO Auto-generated method stub
+        return  this.email.hashCode()  ;
     }
     
 
