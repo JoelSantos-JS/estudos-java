@@ -21,6 +21,13 @@ public class Client implements Comparable<Client> {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public static boolean staticPrive(Client client) {
+        return client.getNome() != "Jose";
+    }
+    public  boolean nonstaticPrive() {
+        return getNome() != "Jose";
+    }
     @Override
     public int hashCode() {
         final int prime = 31;

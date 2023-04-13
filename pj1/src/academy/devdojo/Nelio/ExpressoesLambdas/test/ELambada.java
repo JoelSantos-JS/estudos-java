@@ -3,6 +3,8 @@ package academy.devdojo.Nelio.ExpressoesLambdas.test;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import academy.devdojo.Nelio.Colections.domain.Client;
 
@@ -15,12 +17,11 @@ public class ELambada {
         clients.add(new Client("Mnao", "ajosetereo@gmail.com"));
 
 
-
+        Function<Client , String > func = p -> p.getNome().toUpperCase();
       
-        clients.removeIf(p -> p.getNome() != "Jose");
+      List<String> names =  clients.stream().map(func).collect(Collectors.toList());
 
-        
-
+        System.out.println(names);
         
         for (Client client : clients) {
             System.out.println(client);
