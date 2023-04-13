@@ -1,5 +1,4 @@
 Computer,890.50
 Iphone, 564.20
 Tablet, 450.00
-
-C:/Users/joelt/Desktop/java/file.txt
+PC , 580.00
