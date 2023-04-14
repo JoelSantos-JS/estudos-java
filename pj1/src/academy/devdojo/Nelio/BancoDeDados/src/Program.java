@@ -17,13 +17,11 @@ public class Program {
 
      try {
       conn = DB.getConnection();
-      st = conn.prepareStatement("UPDATE seller " + "SET BaseSalary = BaseSalary + ? " + "WHERE " + "(DepartmentId = ?)" ); 
+      st = conn.prepareStatement("DELETE FROM department " +  "WHERE " + "ID = ?");
+      
 
-      st.setDouble(1, 200.0);
-      st.setInt(2, 2);
-
+      st.setInt(1, 1);
       int stAfff = st.executeUpdate();
-
       System.out.println("Done! " + stAfff);
       
      } catch (SQLException e) {
@@ -35,3 +33,4 @@ public class Program {
      }
     }
 }
+
