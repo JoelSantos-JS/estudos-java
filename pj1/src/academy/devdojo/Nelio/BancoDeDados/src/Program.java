@@ -12,32 +12,26 @@ import academy.devdojo.Nelio.BancoDeDados.src.DB1.DB;
 
 public class Program {
     public static void main(String[] args) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-      Connection connection = null;
-      PreparedStatement preparedStatement = null;
+     Connection conn = null;
+     PreparedStatement st = null;
 
-      try {
-        connection = DB.getConnection();
-        preparedStatement = connection.prepareStatement("insert into seller" + 
-        "(Name, Email, BirthDate, BaseSalary, DepartmentId)  " + "VALUES " + "(?,?,?,?,?)");
+     try {
+      conn = DB.getConnection();
+      st = conn.prepareStatement("UPDATE seller " + "SET BaseSalary = BaseSalary + ? " + "WHERE " + "(DepartmentId = ?)" ); 
 
-        preparedStatement.setString(1 , "Carl purple");
-        preparedStatement.setString(2 , "carl@gmail.com");
-        preparedStatement.setDate(3, new java.sql.Date(sdf.parse("22/04/1950").getTime()));
-        preparedStatement.setDouble(4, 3000.0);
-        preparedStatement.setInt(5, 4);
+      st.setDouble(1, 200.0);
+      st.setInt(2, 2);
 
-        int rowsAffectd = preparedStatement.executeUpdate();
+      int stAfff = st.executeUpdate();
 
-        System.out.println("done" + rowsAffectd);
-      } catch (SQLException e) {
-        // TODO: handle exception
-        e.printStackTrace();
-      }catch (ParseException e) {
-        e.printStackTrace();
-      }finally {
-        DB.closeStatement(preparedStatement);
-        DB.closeConnection();
-      }
+      System.out.println("Done! " + stAfff);
+      
+     } catch (SQLException e) {
+      // TODO: handle exception
+      e.printStackTrace();
+     }finally {
+      DB.closeStatement(st);
+      DB.closeConnection();
+     }
     }
 }
