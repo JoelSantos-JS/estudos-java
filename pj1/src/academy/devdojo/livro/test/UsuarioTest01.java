@@ -33,7 +33,15 @@ public class UsuarioTest01 {
             }
         };
 
-        list.forEach(mostrador);
+        list.forEach(new Consumer<Usuario>() {
+
+            @Override
+            public void accept(Usuario t) {
+                // TODO Auto-generated method stub
+               System.out.println(t.getNome());
+            }
+            
+        });
     
     }
 }
