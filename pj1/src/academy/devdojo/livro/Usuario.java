@@ -4,6 +4,11 @@ public class Usuario {
     private String nome;
     private int ponto;
     private boolean moderador;
+
+    public Usuario(String nome) {
+        this.nome = nome;
+    }
+
     public Usuario(String nome, int ponto ) {
         this.nome = nome;
         this.ponto = ponto;

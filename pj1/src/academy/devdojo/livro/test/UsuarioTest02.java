@@ -22,10 +22,10 @@ public class UsuarioTest02 {
         
         Function<Usuario , Integer> function = u -> u.getPonto();
 
-        Comparator<Usuario> comparator = Comparator.comparing(function).reversed();
+        Comparator<Usuario> comparator = Comparator.comparingInt(Usuario::getPonto).thenComparing(Usuario::getNome);
 
 
-        usuarios.sort(Comparator.comparingInt(e -> e.getPonto()));
+        usuarios.sort(comparator.reversed());
 
 
         for (Usuario usuario : usuarios) {
