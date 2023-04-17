@@ -23,25 +23,9 @@ public class UsuarioTest01 {
         }
 
 
-        Consumer<Usuario> mostrador = new Consumer<Usuario>() {
-          
-
-            @Override
-            public void accept(Usuario t) {
-                // TODO Auto-generated method stub
-               System.out.println(t.getNome());
-            }
-        };
-
-        list.forEach(new Consumer<Usuario>() {
-
-            @Override
-            public void accept(Usuario t) {
-                // TODO Auto-generated method stub
-               System.out.println(t.getNome());
-            }
-            
-        });
+        
+       
+        list.forEach(u -> System.out.println(u.getNome()));
     
     }
 }
