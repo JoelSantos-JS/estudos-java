@@ -21,6 +21,10 @@ public class StreamTest03 {
         pessoas.stream().filter(e -> e.getNacionalidade().equals("Brasileiro")).forEach(e ->  System.out.println(e.getNome()));
         pessoas.stream().filter(e -> e.getNome().equals("Joel")).map(Pessoa::getIdade).forEach(e -> System.out.println(e));
 
-      // System.out.println(pessoas);
+        List<Integer> idades = new ArrayList<>();
+
+        pessoas.stream().forEach(e -> idades.add(e.getIdade()));
+
+       System.out.println(idades);
     }
 }
