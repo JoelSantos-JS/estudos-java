@@ -1,6 +1,7 @@
 package academy.devdojo.javacore.Stream.test;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -25,6 +26,13 @@ public class StreamTest03 {
 
         pessoas.stream().forEach(e -> idades.add(e.getIdade()));
 
-       System.out.println(idades);
+      
+       List<Pessoa> pessoas2 = pessoas.stream().filter(e -> e.getIdade() > 25).sorted(Comparator.comparing(Pessoa::getNome)).collect(Collectors.toList());
+
+    int pessoa3=   pessoas.stream().mapToInt(Pessoa::getIdade).reduce(0, Integer::sum);
+
+
+      System.out.println(pessoa3);
+        //System.out.println(pessoas2);
     }
 }
