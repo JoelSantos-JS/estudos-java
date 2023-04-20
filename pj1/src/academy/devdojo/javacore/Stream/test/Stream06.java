@@ -16,5 +16,6 @@ public class Stream06 {
 
 
     pessoas.stream().filter(e -> e.getIdade() > 30).map(Pessoa::getIdade).reduce(Integer::sum).ifPresent(System.out::println);
+    pessoas.stream().filter(e -> e.getIdade() > 30).map(e -> e.getIdade()).reduce(Integer::sum).ifPresent(System.out::println);
     }
 }
