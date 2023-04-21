@@ -7,7 +7,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import academy.devdojo.javacore.Stream.domain.Pessoa;
+import academy.devdojo.javacore.Threads.domain.Pessoa;
 
 public class StreamTest03 {
     public static void main(String[] args) {

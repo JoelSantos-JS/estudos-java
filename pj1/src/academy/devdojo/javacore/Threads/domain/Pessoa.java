@@ -1,4 +1,4 @@
-package academy.devdojo.javacore.Stream.domain;
+package academy.devdojo.javacore.Threads.domain;
 
 public class Pessoa {
     private long id;

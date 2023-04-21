@@ -6,7 +6,7 @@ import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import academy.devdojo.javacore.Stream.domain.Pessoa;
+import academy.devdojo.javacore.Threads.domain.Pessoa;
 
 public class StreamTest07 {
     public static void main(String[] args) {

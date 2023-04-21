@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import academy.devdojo.javacore.Stream.domain.Pessoa;
+import academy.devdojo.javacore.Threads.domain.Pessoa;
 
 public class StreamTest02 {
     public static void main(String[] args) {

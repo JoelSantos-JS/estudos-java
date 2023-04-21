@@ -3,7 +3,7 @@ package academy.devdojo.javacore.Stream.test;
 import java.util.ArrayList;
 import java.util.List;
 
-import academy.devdojo.javacore.Stream.domain.Pessoa;
+import academy.devdojo.javacore.Threads.domain.Pessoa;
 
 public class Stream06 {
     public static void main(String[] args) {
