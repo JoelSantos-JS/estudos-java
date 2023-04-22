@@ -1,6 +1,9 @@
 package academy.devdojo.Nelio.Colections.test;
 
+import java.util.List;
+
 import academy.devdojo.Nelio.Colections.domain.Client;
+import academy.devdojo.livro.Projeto.domain.Product;
 
 public class Collections {
     public static void main(String[] args) {
@@ -12,5 +15,9 @@ public class Collections {
         System.out.println(client2.hashCode());
         System.out.println(client.equals(client2));
         System.out.println(client == client2);
+    }
+
+    public static List<Product> unmodifiableList(List<Product> products) {
+        return null;
     }
 }

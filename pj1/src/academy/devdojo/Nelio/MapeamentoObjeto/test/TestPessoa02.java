@@ -29,10 +29,9 @@ public class TestPessoa02 {
         
 
 
-        long sum = LongStream.range(0, 1_000_000_000).parallel().filter(x -> x % 2 == 0).sum();
-        long sum2 =LongStream.range(0, 1_000_000_000).parallel().filter(x -> x % 2 == 0).forEach(n -> total+= n);
+        long sum = LongStream.range(0, 10).parallel().filter(x -> x % 2 == 0).sum();
 
-        System.out.println(sum2);
+
 System.out.println(sum);
     }
 }
