@@ -2,7 +2,7 @@ package academy.devdojo.livro.Projeto.domain;
 
 import java.math.BigDecimal;
 
-import javafx.scene.shape.Path;
+import java.nio.file.Path;
 
 public class Product {
     private String name;
