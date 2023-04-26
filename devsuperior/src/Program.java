@@ -2,7 +2,9 @@
 
 import java.util.Scanner;
 
+import Entities.Employ;
 import service.PensionService;
+import service.SalaryService;
 import service.TaxService;
 
 public class Program {
@@ -11,14 +13,9 @@ public class Program {
 
         Scanner scanner = new Scanner(System.in);
 
-        TaxService taxService = new TaxService();
-        PensionService pensionService = new PensionService();
+    
 
-        System.out.println(pensionService.discount(4000));
-
-        System.out.println(taxService.tax(4000));
-
-
+     
         System.out.print("Nome:");
 
         String name = scanner.nextLine();
@@ -26,9 +23,12 @@ public class Program {
 
         double grossSalary = scanner.nextDouble();
 
+        Employ employ = new Employ(name, grossSalary);
 
-        double netSalaru = grossSalary * 0.7;
+        SalaryService salaryService = new SalaryService();
+        double newSalary = salaryService.netSalay(employ);
+        System.out.println("Seu novo salário é: " +newSalary );
 
-        System.out.println("Seu novo salário é: " + netSalaru);
+        scanner.close();
     }
 }
