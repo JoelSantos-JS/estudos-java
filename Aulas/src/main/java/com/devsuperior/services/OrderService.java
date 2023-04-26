@@ -13,6 +13,6 @@ public class OrderService extends Shipping {
     }
 
     public double total(Order order) {
-        return order.getBasic() - shipment(order);
+        return shipment(order);
     }
 }

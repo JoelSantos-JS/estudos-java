@@ -37,7 +37,7 @@ public class AulasApplication implements CommandLineRunner {
 		// TODO Auto-generated method stub
 		Employ  employ = new Employ("Joel", 2550);
 
-		Order order = new Order(2548, 350.00, 201.0);
+		Order order = new Order(2548, 350.00, 120.0);
 
 		
 		System.out.println(orderService.total(order));

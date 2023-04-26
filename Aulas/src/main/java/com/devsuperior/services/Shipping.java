@@ -10,9 +10,9 @@ public class Shipping {
 
     public double shipment(Order order){
         if(order.getDiscount() >= 100 && order.getDiscount() <= 200){
-            return order.getBasic() * 0.12;
+            return order.getBasic() - order.getDiscount() + 12;
         }else if(order.getDiscount() < 100) {
-            return order.getBasic() * 0.2;
+            return order.getBasic() - order.getDiscount()  + 20;
         
 
         
