@@ -18,7 +18,7 @@ public class Shipping {
         
         }
 
-        return order.getDiscount();
+        return order.getBasic() - order.getDiscount();
             
 
     }
