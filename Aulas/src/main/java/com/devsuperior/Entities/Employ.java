@@ -1,4 +1,8 @@
-package Entities;
+package com.devsuperior.Entities;
+
+
+
+
 public class Employ {
     private String name;
     private double grossSalary;

@@ -25,7 +25,7 @@ public class Program {
 
         Employ employ = new Employ(name, grossSalary);
 
-        SalaryService salaryService = new SalaryService();
+        SalaryService salaryService = new SalaryService(new TaxService(), new PensionService());
         double newSalary = salaryService.netSalay(employ);
         System.out.println("Seu novo salário é: " +newSalary );
 
