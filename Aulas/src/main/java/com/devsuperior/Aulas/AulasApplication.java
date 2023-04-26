@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 import com.devsuperior.Entities.Employ;
+import com.devsuperior.Entities.Order;
+import com.devsuperior.services.OrderService;
 import com.devsuperior.services.SalaryService;
 
 @SpringBootApplication
@@ -18,6 +20,8 @@ public class AulasApplication implements CommandLineRunner {
 	private SalaryService salaryService;
 
 	
+	@Autowired
+	private OrderService orderService;
 
 
 
@@ -32,6 +36,11 @@ public class AulasApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		Employ  employ = new Employ("Joel", 2550);
+
+		Order order = new Order(2548, 350.00, 201.0);
+
+		
+		System.out.println(orderService.total(order));
 
 
 
