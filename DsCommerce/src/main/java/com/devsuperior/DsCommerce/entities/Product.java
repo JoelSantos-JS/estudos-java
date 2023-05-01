@@ -38,6 +38,7 @@ public class Product {
     private Set<OrderItem> items = new HashSet<>();
 
 
+    
     public Product() {}
 
     
@@ -91,6 +92,40 @@ public class Product {
     public List<Order> getOrders() {
         return items.stream().map(x -> x.getOrder()).toList();
     }
+
+
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+
+
+  
 
     
 }
