@@ -10,17 +10,17 @@ public class OrderItem {
     @EmbeddedId
     private OrderItemPk id = new OrderItemPk();
 
-    private Integer quatity;
+    private Integer quantity;
     private Double price;
 
     public OrderItem(){
 
     }
 
-    public OrderItem(Order order , Product product ,Integer quatity, Double price) {
+    public OrderItem(Order order , Product product ,Integer quantity, Double price) {
         id.setOrder(order);
         id.setProduct(product);
-        this.quatity = quatity;
+        this.quantity = quantity;
         this.price = price;
     }
 
@@ -31,8 +31,8 @@ public class OrderItem {
     public Product getProduct( ) {
          return id.getProduct();
     }
-    public Integer getQuatity() {
-        return quatity;
+    public Integer quantity() {
+        return quantity;
     }
 
     public Double getPrice() {
