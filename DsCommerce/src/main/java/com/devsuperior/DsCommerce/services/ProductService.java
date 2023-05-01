@@ -1,8 +1,11 @@
 package com.devsuperior.DsCommerce.services;
 
-import java.util.Optional;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,12 +22,23 @@ public class ProductService {
 
     @Transactional(readOnly = true)
     public ProductDto  findById(Long id) {
-        Optional<Product> result = productRepository.findById(id);
-        Product product = result.get();
-
+        Product product  = productRepository.findById(id).get();
+       
         ProductDto productDto = new ProductDto(product);
 
 
         return productDto;
+    }
+
+    @Transactional(readOnly = true)
+    public Page<ProductDto> findAll(Pageable pageable)  {
+        Page<Product> product  = productRepository.findAll(pageable);
+    
+
+     
+        
+
+
+        return product.map(e -> new ProductDto(e));
     }
 }
