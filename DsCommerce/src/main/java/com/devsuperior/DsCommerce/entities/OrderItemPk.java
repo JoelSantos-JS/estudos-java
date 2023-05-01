@@ -1,7 +1,6 @@
 package com.devsuperior.DsCommerce.entities;
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
@@ -12,7 +11,7 @@ public class OrderItemPk {
     private Order order;
 
     @ManyToOne
-    @JoinColumn(name = "order_id")
+    @JoinColumn(name = "product_id")
     private Product product;
 
     public Order getOrder() {
