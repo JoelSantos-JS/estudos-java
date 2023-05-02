@@ -1,10 +1,9 @@
 package com.devsuperior.DsCommerce.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,22 +23,22 @@ public class ProductController {
     private ProductService service;
 
     @GetMapping(value = "/{id}")
-    public ProductDto findById(@PathVariable Long id) {
+    public  ResponseEntity< ProductDto> findById(@PathVariable Long id) {
         ProductDto dto = service.findById(id);
 
-        return dto;
+        return ResponseEntity.ok(dto);
     } 
     @GetMapping
-    public Page<ProductDto> findByAll(Pageable pageable) {
-         
+    public ResponseEntity< Page<ProductDto>>findByAll(Pageable pageable) {
+         Page<ProductDto> productDto = service.findAll(pageable);
 
-        return service.findAll(pageable);
+        return ResponseEntity.ok(productDto);
     } 
     @PostMapping
-    public ProductDto insert(@RequestBody ProductDto dto) {
-         
+    public ResponseEntity< ProductDto> insert(@RequestBody ProductDto dto) {
+         ProductDto productDto = service.insert(dto);
 
-        return service.insert(dto);
+        return ResponseEntity.status(201).body(productDto);
     } 
     
 }
