@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.devsuperior.DsCommerce.dto.ProductDto;
 import com.devsuperior.DsCommerce.entities.Product;
 import com.devsuperior.DsCommerce.repository.ProductRepository;
+import com.devsuperior.DsCommerce.services.exceptions.ResourceNotFound;
 
 @Service //registra a classe como um componente do spring, que vai ser injetado em outras classes
 public class ProductService {
@@ -22,7 +23,7 @@ public class ProductService {
 
     @Transactional(readOnly = true)
     public ProductDto  findById(Long id) {
-        Product product  = productRepository.findById(id).get();
+        Product product  = productRepository.findById(id).orElseThrow(() -> new ResourceNotFound("Recurso nao encontrado"));
        
         ProductDto productDto = new ProductDto(product);
 

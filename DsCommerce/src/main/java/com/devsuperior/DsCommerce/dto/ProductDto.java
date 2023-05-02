@@ -12,7 +12,7 @@ public class ProductDto {
     private String imgUrl;
 
 
-    public ProductDto() {}
+    
 
 
     public ProductDto(long id, String name, String description, Double price, String imgUrl) {
