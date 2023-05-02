@@ -56,6 +56,21 @@ public class ProductService {
        return  new ProductDto(product);
 
     }
+    @Transactional
+    public ProductDto put(Long id ,ProductDto dto) {
+        
+        Product product2 = productRepository.getReferenceById(id);
+        product2.setName(dto.getName());
+        product2.setDescription(dto.getDescription());
+        product2.setImgUrl(dto.getImgUrl());
+        product2.setPrice(dto.getPrice());
+
+       product2 = productRepository.save(product2);
+
+
+       return  new ProductDto(product2);
+
+    }
 
      
         
