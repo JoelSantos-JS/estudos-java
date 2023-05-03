@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.devsuperior.DsCommerce.dto.ProductDto;
 import com.devsuperior.DsCommerce.services.ProductService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping(value = "/products")
 public class ProductController {
@@ -37,7 +39,7 @@ public class ProductController {
         return ResponseEntity.ok(productDto);
     } 
     @PostMapping
-    public ResponseEntity< ProductDto> insert(@RequestBody ProductDto dto) {
+    public ResponseEntity< ProductDto> insert(@Valid @RequestBody ProductDto dto) {
          ProductDto productDto = service.insert(dto);
 
         return ResponseEntity.status(201).body(productDto);

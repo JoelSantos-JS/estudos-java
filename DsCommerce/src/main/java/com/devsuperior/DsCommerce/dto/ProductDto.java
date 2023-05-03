@@ -2,12 +2,27 @@ package com.devsuperior.DsCommerce.dto;
 
 import com.devsuperior.DsCommerce.entities.Product;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
+
 public class ProductDto {
 
     private long id;
+
+    @NotEmpty(message = "Campo obrigatário")
+    @NotBlank(message = "Campo obrigatário")
+    @Size(min = 5, message =  "Minimo 5")
     private String name;
 
+    @NotEmpty(message = "Campo obrigatário")
+    @Size(min = 10, message =  "Minimo 10")
     private String description;
+
+    @Positive(message = "Preço deve ser positivo")
+    @NotNull(message = "Campo obrigatário")
     private Double price;
     private String imgUrl;
 
